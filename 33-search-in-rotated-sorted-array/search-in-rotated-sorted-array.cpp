@@ -1,11 +1,11 @@
 class Solution {
-public:
+public:// Important observation is one half on the rotated array will always be sorted
     int search(vector<int>& nums, int target) {
        int n=nums.size();
        int low=0;
        int high=n-1;
        while(low<=high){
-        int mid=(low+high)/2;
+int mid = low + (high - low) / 2;
         if(nums[mid]==target)
         return mid;
         //determine the sorted half
@@ -28,6 +28,6 @@ public:
         }
        } 
        return -1;
-       
+
     }
 };
