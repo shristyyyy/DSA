@@ -4,7 +4,7 @@ public:
         long long totalH = 0;
 
         for (int bananas : piles) {
-            totalH += (bananas + speed - 1LL) / speed;
+            totalH += ceil((double)bananas / speed);
         }
         return totalH;
     }
